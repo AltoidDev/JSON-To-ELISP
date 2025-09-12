@@ -41,3 +41,4 @@ def encode(filetext:String):
                 
         if is_recursive:
             pass
+    return(buffer)

@@ -1,14 +1,16 @@
 import os
 import sys
+import filehandler
 
 working = os.getcwd()
 cpath = working+"config.json"
 
 def read_config(filename:String):
     if os.is_file(f"{working}config.json"):
-        config = open(cpath,'rw')
+        config = open(cpath,'r')
         print(config)
-        with open(working_"config.org","W") as file:
+        config = filehandler.encode(config)
+        with open(working+"config.org","W") as file:
             file.write(config)
         config.close()
     else:

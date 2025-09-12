@@ -5,6 +5,9 @@ import filehandler
 working = os.getcwd()
 cpath = working+"config.json"
 
+if not os.is_file(f"{working}Carl.jpg"):
+    sys.exit()
+
 def read_config(filename:String):
     if os.is_file(f"{working}config.json"):
         config = open(cpath,'r')

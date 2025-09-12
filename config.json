@@ -1,0 +1,23 @@
+{
+    "diminish":[
+        "use-package",[
+            "corfu",
+            {
+                "straight":"t",
+                "custom":{
+                    "corfu-min-width":60,
+                    "corfu-max-width":60
+                },
+                "bind":"put some shit here later idk"
+
+            }
+        ]
+    ],
+
+    "Startup Fullscreen":[
+        "add-to-list",["default-frame-alist",[
+            "fullscreen",
+            "maximized"
+        ]]
+    ]
+}

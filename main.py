@@ -14,7 +14,8 @@ def read_config():
         config = open(cpath,'r')
         print(config)
         config = filehandler.encode(config.read())
-        with open(working+"/config.org","W") as file:
+        with open(working+"/config.org","w") as file:
             file.write(config)
     else:
         sys.exit()
+read_config()

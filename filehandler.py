@@ -1,5 +1,7 @@
 import json
 
+buffer:str = ""
+
 def encode(filetext:str):
     try:
         conf = json.loads(filetext)
@@ -17,6 +19,7 @@ def encode(filetext:str):
     else:
         print("Config file isn't valid json syntax, please fix it")
     def search(object,recursion:int=0):
+        global buffer
         if recursion > 0:
             print(f"Checking recursive dict at level {recursion} with value {object}")
 
@@ -25,6 +28,7 @@ def encode(filetext:str):
                 print("Type: header")
                 if object.startswith("#l"):
                     pass #handle the literals dumb bass (fih)
+                buffer = buffer+object
 
             case list():
                 print("Type: list")
